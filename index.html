@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一个人的迁徙</title>
+
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+  font-family: 'Georgia','Songti SC',serif;
+  background: #f8f5f0;   /* 奶油白 */
+  min-height:100vh;
+  overflow-x:hidden;
+  color:#6b7280;         /* 浅灰字体 */
+}
+
+
+  .journey-container {
+    max-width:400px;
+    margin:0 auto;
+    padding:40px 20px;
+  }
+
+  .title {
+    text-align:center;
+    font-size:14px;
+    letter-spacing:8px;
+    color:#666;
+    margin-bottom:50px;
+  }
+
+  .timeline {
+    position:relative;
+    padding-left:30px;
+  }
+
+ .timeline::before {
+  content:'';
+  position:absolute;
+  left:8px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#e8c7cf;   /* 粉色 */
+}
+
+  .moment {
+    position:relative;
+    margin-bottom:50px;
+  }
+
+  .moment-dot {
+    position:absolute;
+    left:-26px;
+    top:5px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    border:2px solid #e8c7cf;
+    background:#ffffff;
+  }
+
+  .moment-content {
+  background:#ffffff;
+  border-radius:12px;
+  padding:20px;
+  border-left:3px solid #e8c7cf;  /* 粉色边框 */
+  cursor:pointer;
+}
+
+ .moment-text {
+  font-size:14px;
+  line-height:1.9;
+  color:#9ca3af;   /* 浅灰 */
+}
+
+
+  .moment-hidden {
+    display:none;
+    margin-top:15px;
+    padding-top:15px;
+    border-top:1px solid #30363d;
+    font-size:13px;
+    color:#6e7681;
+    line-height:1.8;
+    font-style:italic;
+  }
+</style>
+
+<script>
+function toggleHidden(el){
+  const hidden = el.querySelector('.moment-hidden');
+  hidden.style.display = hidden.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="journey-container">
+  <div class="title">如果每次都能遇到你</div>
+
+  <div class="timeline">
+
+    <div class="moment">
+      <div class="moment-dot"></div>
+      <div class="moment-content" onclick="toggleHidden(this)">
+        <div class="moment-text">
+          16<br>
+          姐姐，其实我一直不知道为什么你会喜欢我，我努力想啊想，还是不知道，为什么像姐姐这样的人，会喜欢我呢。<br>
+          你就好像仙女下凡，一下子就出现在我的灶台上了，姐姐，我都看傻了，你好漂亮，眼睛圆圆的，脸也圆圆的，好可爱。<br>
+          你笑了，那一瞬间我觉得窘迫，是因为我灰头土脸吗，还是因为我的鞋看起来脏脏的，好难堪，可你不在乎，你的手那么软，那么干净，牵着我的手，好暖和。<br>
+          姐姐，我想说喜欢你的，我想说那些好听的话，念诗给你听，学着老师的样子背着手，郑重其事地告诉你我的心意。<br>
+          可你一笑，我就什么也忘记了。<br>
+          你说要我好好读书，我有读了，我现在成绩还可以，小卖部老板都夸我数学好呢。<br>
+          姐姐，我好想你，谢谢你喜欢我。<br>
+          这是我这辈子最好的事。<br>
+        </div>
+        <div class="moment-hidden">
+         姐姐，其实我想问你，能不能不走，能不能留下陪我，我不能困住你，可是姐姐，我舍不得。
+        </div>
+      </div>
+    </div>
+
+    <div class="moment">
+      <div class="moment-dot"></div>
+      <div class="moment-content" onclick="toggleHidden(this)">
+        <div class="moment-text">
+          26<br>
+          你又去上那个破班，我就不明白了，到底有什么好上的，是我养不起你吗？钱不够花？<br>
+          ....算了，我不想和你吵，吵起来你就更不理我，我更烦。<br>
+          我不想你不理我。<br>
+          你怎么每天都有那么多事要做，去实验室，和朋友出去玩，和家里视频，你怎么就是没多少时间留给我呢。<br>
+          你老是说让我出门，我出门干什么，帮你拿外卖，取快递，买零食，其他的我出门干什么，外面又没有你。<br>
+          你说我有分离焦虑，是，我是有，你离开我一分一秒我都觉得难受，我想你。<br>
+          我嫉妒每一个和你密切接触的人，凭什么他们可以占用你的时间，凭什么我不能参与你的这部分人生。<br>
+          凭什么，你的目光不能只看着我呢。<br>
+        </div>
+        <div class="moment-hidden">
+          你说我脾气不好，不高兴的时候不爱说话，可我不是不想说，我怕我一开口，就只会拽着你，说别不要我。
+        </div>
+      </div>
+    </div>
+
+   <div class="moment">
+     <div class="moment-dot"></div>
+     <div class="moment-content" onclick="toggleHidden(this)">
+       <div class="moment-text">
+         36<br>
+         小猫现在在做什么呢？晒太阳？还是吃零食？我的宝贝，怎么样都好可爱。<br>
+         捏捏手就会开花，亲几下就会笑，抱着拍拍就会把脸埋在我怀里撒娇。<br>
+         到底是要怎么细心抚养，才能养出这么可爱的小猫。<br>
+         我总是被你逗笑，我的宝贝，色厉内荏的笨蛋，张牙舞爪跑过来挠我几下，又留下牙印就跑，被抓住就四脚朝天一动不动装死。<br>
+         宝宝，好拙劣的伎俩。<br>
+         我的百变小猫，开心的时候变成巧克力吉事果，不开心的时候变成苦苦的提拉米苏，累了的时候变成手工瘫软面条，怎么看都让人想要一口吃掉。<br>
+         聪明的，柔软的，勇敢的我的宝贝。<br>
+         现在应该在家人的身边，被爱意包围环绕吧。<br>
+         我希望你可以一辈子这么幸福下去，永远，永远。<br>
+       </div>
+       <div class="moment-hidden">
+          如果可以，下一个10年，我依然想要牵着你的手走下去，亲爱的乐乐小姐，我爱你。
+       </div>
+     </div>
+   </div>
+
+  </div>
+</div>
+
+</body>
+</html>
